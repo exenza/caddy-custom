@@ -4,6 +4,6 @@ RUN --mount=type=cache,target=/go/pkg/mod \
     xcaddy build \
     --with github.com/caddy-dns/route53 \
     --with github.com/caddy-dns/cloudflare
-
+#Pull latest image
 FROM caddy:latest
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
